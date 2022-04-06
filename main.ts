@@ -187,8 +187,8 @@ namespace IR {
         received = false
     }
 
-    control.inBackground() {
-        basic.forever() {
+     function control.inBackground() {
+       
             if ((!received) && (rec_init)) {
                 if (arr.length > 20) {
                     if ((input.runningTimeMicros() - arr[arr.length - 1]) > 120000) {
@@ -202,7 +202,7 @@ namespace IR {
                     }
                 }
             }
-        }
+       
     }
 
     function decodeIR() {
